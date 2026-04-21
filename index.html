@@ -16,23 +16,35 @@
         .contact { font-style: normal; color: #666; margin-top: 8px; font-size: 0.95em; }
         */
         
-        /* 사진 없는 버전 */
+        /* 사진 없는 왼쪽 정렬 헤더 스타일 */
         .header-content { 
-            text-align: center;
-            border-bottom: 2px solid #005eb8; 
-            padding-bottom: 30px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end; 
+            border-bottom: 3px solid #005eb8;
+            padding-bottom: 20px; 
             margin-bottom: 40px; 
         }
+        
         .profile-text h1 { 
             margin: 0; 
             color: #005eb8; 
-            font-size: 2.8em;
+            font-size: 2.6em; 
+            letter-spacing: -1px; /* 글자 간격을 좁혀서 더 단단한 느낌 부여 */
         }
+        
         .contact { 
+            text-align: right; /* 연락처 정보만 오른쪽으로 밀어서 균형을 맞춤 */
             font-style: normal; 
             color: #666; 
-            margin-top: 15px; 
-            font-size: 1.1em; 
+            font-size: 0.95em; 
+            line-height: 1.6;
+        }
+        
+        /* 모바일 등 화면이 좁아질 때를 대비한 처리 */
+        @media (max-width: 600px) {
+            .header-content { display: block; text-align: left; }
+            .contact { text-align: left; margin-top: 15px; }
         }
         
         /* 섹션 스타일 */
@@ -62,16 +74,17 @@
     <header>
         <div class="header-content">
             <div class="profile-text">
-                <h1>백재민 (Jae-min Baek)</h1>
-                <div class="contact">
-                    DGIST 기초학부 컴퓨터공학 트랙 3학년<br>
-                    Email: <a href="mailto:jm.baek@dgist.ac.kr">jm.baek@dgist.ac.kr</a> | 
-                    <a href="https://github.com/DGIST-JaeminBaek" target="_blank">GitHub</a>
-                </div>
+                <h1>백재민 <span style="font-size: 0.6em; font-weight: normal; color: #888;">Jae-min Baek</span></h1>
+                <p style="margin: 5px 0 0 0; color: #444; font-weight: 500;">DGIST 기초학부 컴퓨터공학 트랙 (3학년)</p>
+            </div>
+            <div class="contact">
+                Email: <a href="mailto:jmbaek@dgist.ac.kr" style="color: #666; text-decoration: none;">jmbaek@dgist.ac.kr</a><br>
+                GitHub: <a href="https://github.com/DGIST-JaeminBaek" target="_blank" style="color: #666; text-decoration: none;">DGIST-JaeminBaek</a><br>
+                Location: Daegu, South Korea
             </div>
         </div>
     </header>
-
+    
     <section>
         
         <h2>Education</h2>
