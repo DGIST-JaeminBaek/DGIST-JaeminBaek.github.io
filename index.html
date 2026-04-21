@@ -3,41 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>백재민 | Portfolio</title>
+    <title>백재민 | Academic Portfolio</title>
     <style>
-        body { font-family: 'Pretendard', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #f9f9f9; }
-        header { border-bottom: 2px solid #005eb8; padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { margin: 0; color: #005eb8; }
-        h2 { border-left: 5px solid #005eb8; padding-left: 10px; margin-top: 40px; }
-        .project { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        .tag { background: #eef4ff; color: #005eb8; padding: 2px 8px; border-radius: 4px; font-size: 0.9em; font-weight: bold; }
-        .contact { font-style: normal; color: #666; }
+        /* 기본 스타일 */
+        body { font-family: 'Pretendard', -apple-system, sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 50px 20px; background: #fff; }
+        
+        /* 헤더/프로필 영역 */
+        .header-content { display: flex; align-items: center; border-bottom: 2px solid #005eb8; padding-bottom: 25px; margin-bottom: 35px; }
+        .profile-photo { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid #005eb8; margin-right: 35px; }
+        .profile-text h1 { margin: 0; color: #005eb8; font-size: 2.2em; }
+        .contact { font-style: normal; color: #666; margin-top: 8px; font-size: 0.95em; }
+        
+        /* 섹션 스타일 */
+        h2 { border-left: 5px solid #005eb8; padding-left: 15px; margin-top: 45px; color: #005eb8; font-size: 1.5em; }
+        h3 { font-size: 1.2em; color: #444; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        
+        /* 리스트 및 상세 내용 */
+        .gpa-highlight { font-size: 1.2em; font-weight: bold; color: #005eb8; margin-bottom: 20px; }
+        ul { padding-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; }
+        .course-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .course-item { background: #f8f9fa; padding: 10px 15px; border-radius: 8px; font-size: 0.95em; border: 1px solid #eee; }
+        .ugrp-box { background: #eef4ff; padding: 20px; border-radius: 12px; border-left: 5px solid #005eb8; }
+        
+        a { text-decoration: none; color: #005eb8; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+        @media (max-width: 600px) {
+            .header-content { flex-direction: column; text-align: center; }
+            .profile-photo { margin-right: 0; margin-bottom: 20px; }
+            .course-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>백재민 (Jae-min Baek)</h1>
-        <p class="contact">DGIST 기초학부 컴퓨터공학 트랙 3학년<br>Email: jmbaek@dgist.ac.kr | <a href="#">GitHub</a></p>
+        <div class="header-content">
+            <img src="profile.jpg" alt="백재민 프로필 사진" class="profile-photo">
+            <div class="profile-text">
+                <h1>백재민 (Jae-min Baek)</h1>
+                <div class="contact">
+                    DGIST 기초학부 컴퓨터공학 트랙 3학년<br>
+                    Email: <a href="mailto:jm.baek@dgist.ac.kr">jm.baek@dgist.ac.kr</a> | 
+                    <a href="https://github.com/DGIST-JaeminBaek" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <section>
-        <h2>Education & Academic Activity</h2>
-        <p><strong>DGIST 기초학부 3학년 (컴퓨터공학 트랙)</strong> | GPA: 4.12 / 4.30</p>
+        
+        <h2>Education</h2>
+        <div class="gpa-highlight">
+            Cumulative GPA: 4.12 / 4.30 <span style="font-weight: normal; font-size: 0.8em; color: #888;">(98.2 / 100)</span>
+        </div>
+        <p><strong>DGIST (대구경북과학기술원)</strong> | 2022.03 - 현재 (2023-2024 군 휴학)</p>        
         
         <h3>Current Semester (Spring 2026)</h3>
         <ul>
-            <li><strong>컴퓨터비전개론 & 기계학습개론:</strong> AI 및 시각 지능 심화 학습 중</li>
-            <li><strong>UGRP I:</strong> 로봇 파운데이션 모델 기반 연구 프로젝트 수행 (VLA 모델 관련 실전 경험)</li>
-            <li>시스템 프로그래밍, 컴퓨터구조, 프로그래밍 언어</li>
+            <li><strong>컴퓨터비전개론, 시스템 프로그래밍, 컴퓨터 구조, 프로그래밍 언어, UGRP</li>
         </ul>
-    
-        <h3>Major Coursework (Selected)</h3>
-        <p>Linear Algebra (A+), Data Structures (A+), Scientific Writing (A+), Intro to AI (A0)</p>
+
+        <h3>Relevant Coursework (Completed)</h3>
+        <div class="course-grid">
+            <div class="course-item">선형대수학 (A+)</div>
+            <div class="course-item">다변수 미적분학 (A+)</div>
+            <div class="course-item">자료구조 (A+)</div>
+            <div class="course-item">객체지향 프로그래밍 (A+)</div>
+            <div class="course-item">인공지능기초 (A0)</div>
+            <div class="course-item">Scientific Writing (A+)</div>
+        </div>
     </section>
-    
+
     <section>
-        <h2>Skills</h2>
-        <p><strong>Languages:</strong> Python, C++</p>
+            <h2>Research Experience</h2>
+            <div class="research-card">
+                <h3 style="border:none; margin-top:0; color:#005eb8;">UGRP: 로봇 파운데이션 모델 기반 데이터 효율적 작업 적응 기술 연구 <span class="date">2026.02 - 2026.12 (진행 중)</span></h3>
+                <p style="margin-top:-10px; font-size:0.9em; color:#666;">Advisor: 임성훈 교수님</p>
+                <p>
+                    최신 <strong>VLA(Vision-Language-Action) 모델</strong>을 Piper 로봇 플랫폼에 이식하고, 
+                    <strong>최소한의 시연 데이터(Demonstration)로 새로운 태스크를 수행할 수 있도록 하는 최적의 학습 및 제어 전략 수립</strong>을 목표로 합니다.
+                </p>                
+                <h4>Current Focus & Technical Approach (2026.04)</h4>
+                        <ul>
+                            <li>
+                                <strong>인터페이스 설계:</strong> 
+                                Python SDK, LeRobot 라이브러리 및 
+                                <a href="https://github.com/dhkim-furiosa/LoRA-SP" target="_blank" style="text-decoration: underline; color: #005eb8; font-weight: bold;">
+                                    선행 연구 배포 자료
+                                </a>를 활용하여 모델의 추론 행동을 로봇의 실시간 동작으로 변환하는 통합 파이프라인 설계 예정
+                            </li>                                
+                            <li><strong>제어 파이프라인 설계:</strong> 
+                                    관절 값 캘리브레이션을 통한 동작 범위 정규화로 모델 추론 결과 실행 시의 급가속 방지 및 하드웨어 안전성 확보 연구 예정
+                            </li>
+                                
+                            <li><strong>실험 설계:</strong> 
+                                    실험 설계 및 분석: 선행 연구 기반의 표준 카메라 세팅을 분석하고, 제로샷 성능 측정 및 파인튜닝 실험을 위한 시나리오 선정 및 성공 지표 설계 예정
+                            </li>
+                        </ul>
+                
+                <h4>Key Achievements (2026.03)</h4>
+                <ul>
+                    <li><strong>환경 구축 및 검증:</strong> Ubuntu 22.04 기반 ROS2 환경 구축 및 개발사 SDK 분석을 통한 초기 구동 환경 최적화</li>
+                    <li><strong>통신 트러블슈팅:</strong> 
+                        SDK 소스 코드(`interface_v2.py`) 및 CAN 패킷 분석을 통해 Master/Slave 모드 설정 오류를 식별하고, 하드웨어 설정 문제를 해결하여 실시간 Teleoperation 및 관절 피드백 정상화
+                    </li>
+                    <li><strong>데이터 로깅:</strong> LeRobot 기반 에피소드 데이터 녹화 및 데이터 정규화(stats.json) 기능 구현</li>
+                </ul>
+            </div>
     </section>
 </body>
 </html>
