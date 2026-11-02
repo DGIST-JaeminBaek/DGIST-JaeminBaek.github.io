@@ -3,69 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>백재민 CV</title>
+    <title>백재민 | Jaemin Baek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&amp;display=swap" rel="stylesheet">
     <style>
-        /* 기본 스타일 */
-        body { font-family: 'Pretendard', -apple-system, sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 50px 20px; background: #fff; }
-        
-        /* 사진 있는 버전 */
-        /*
-        .header-content { display: flex; align-items: center; border-bottom: 2px solid #005eb8; padding-bottom: 25px; margin-bottom: 35px; }
-        .profile-photo { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid #005eb8; margin-right: 35px; }
-        .profile-text h1 { margin: 0; color: #005eb8; font-size: 2.2em; }
-        .contact { font-style: normal; color: #666; margin-top: 8px; font-size: 0.95em; }
-        */
-        
-        /* 사진 없는 왼쪽 정렬 헤더 스타일 */
-        .header-content { 
+        :root {
+            color-scheme: light;
+            --background: #ffffff;
+            --heading: #242424;
+            --text: #414141;
+            --muted: #74716d;
+            --accent: #803d48;
+            --line: #e8e8e8;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            max-width: 1060px;
+            margin: 0 auto;
+            padding: 64px 40px 88px;
+            background: var(--background);
+            color: var(--text);
+            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            word-break: keep-all;
+            overflow-wrap: anywhere;
+        }
+        .header-content {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end; 
-            border-bottom: 3px solid #005eb8;
-            padding-bottom: 20px; 
-            margin-bottom: 40px; 
+            align-items: flex-end;
+            gap: 32px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--heading);
         }
-        
-        .profile-text h1 { 
-            margin: 0; 
-            color: #005eb8; 
-            font-size: 2.6em; 
-            letter-spacing: -1px; /* 글자 간격을 좁혀서 더 단단한 느낌 부여 */
-        }
-        
-        .contact { 
-            text-align: right; /* 연락처 정보만 오른쪽으로 밀어서 균형을 맞춤 */
-            font-style: normal; 
-            color: #666; 
-            font-size: 0.95em; 
-            line-height: 1.6;
-        }
-        
-        /* 모바일 등 화면이 좁아질 때를 대비한 처리 */
-        @media (max-width: 600px) {
-            .header-content { display: block; text-align: left; }
-            .contact { text-align: left; margin-top: 15px; }
-        }
-        
-        /* 섹션 스타일 */
-        h2 { border-left: 5px solid #005eb8; padding-left: 15px; margin-top: 45px; color: #005eb8; font-size: 1.5em; }
-        h3 { font-size: 1.2em; color: #444; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        
-        /* 리스트 및 상세 내용 */
-        .gpa-highlight { font-size: 1.2em; font-weight: bold; color: #005eb8; margin-bottom: 20px; }
-        ul { padding-left: 20px; margin-bottom: 20px; }
-        li { margin-bottom: 10px; }
-        .course-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .course-item { background: #f8f9fa; padding: 10px 15px; border-radius: 8px; font-size: 0.95em; border: 1px solid #eee; }
-        .ugrp-box { background: #eef4ff; padding: 20px; border-radius: 12px; border-left: 5px solid #005eb8; }
-        
-        a { text-decoration: none; color: #005eb8; font-weight: 500; }
-        a:hover { text-decoration: underline; }
+        .profile-text h1 { margin: 0; color: var(--heading); font-size: 3.3rem; line-height: 1.3; letter-spacing: -2px; }
+        .english-name { display: inline-block; margin-left: 8px; color: var(--muted); font-size: 1.15rem; font-weight: 400; letter-spacing: 0; }
+        .affiliation { margin: 12px 0 0; font-size: 0.9rem; }
+        .research-interests { margin: 8px 0 0; color: var(--accent); font-size: 0.83rem; letter-spacing: 0.02em; }
+        .contact { flex-shrink: 0; text-align: right; color: var(--muted); font-size: 0.82rem; line-height: 1.9; }
+        .contact a { color: inherit; }
+        .section-nav { display: flex; flex-wrap: wrap; gap: 24px; padding-top: 16px; font-size: 0.8rem; }
+        .section-nav a { color: var(--muted); }
+        .section-nav a:hover { color: var(--accent); }
+        section { margin-top: 56px; scroll-margin-top: 24px; }
+        h2 { margin: 0 0 28px; padding-bottom: 14px; border-bottom: 1px solid var(--line); color: var(--heading); font-size: 1.45rem; font-weight: 700; letter-spacing: -0.4px; }
+        h3 { margin: 28px 0 12px; color: var(--heading); font-size: 1rem; font-weight: 700; }
+        h4 { margin: 34px 0 12px; color: var(--muted); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.025em; }
+        strong { color: var(--heading); font-weight: 700; }
+        .academic-summary { margin: 6px 0 12px; color: var(--muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+        .timeline { margin: 0; padding: 0; list-style: none; }
+        .timeline > li { display: grid; grid-template-columns: 155px minmax(0, 1fr); gap: 24px; margin: 0; padding: 0 0 26px; }
+        .timeline > li:last-child { padding-bottom: 0; }
+        .timeline-date { padding-top: 1px; color: var(--muted); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+        .timeline-content { position: relative; padding-left: 22px; border-left: 1px solid var(--line); }
+        .timeline-content::before { content: ''; position: absolute; left: -3px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+        .timeline-content h3 { margin: 0; font-size: 0.95rem; font-weight: 700; }
+        .timeline-content p { margin: 5px 0 0; font-size: 0.85rem; }
+        .timeline-content .academic-summary { margin: 6px 0 12px; }
+        ul { margin: 0 0 20px; padding-left: 20px; }
+        li { margin-bottom: 12px; padding-left: 3px; }
+        li::marker { color: var(--muted); }
+        .feature-list { margin: 0; padding: 0; list-style: none; }
+        .feature-list li { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 22px; margin: 0; padding: 17px 0; border-top: 1px solid var(--line); font-size: 0.9rem; }
+        .feature-list li > strong { font-size: 0.87rem; }
+        .research-points { min-width: 0; }
+        .research-points p { margin: 0; text-wrap: pretty; }
+        .research-points p + p { margin-top: 6px; }
+        .text-unit { white-space: nowrap; }
+        .research-phase { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; }
+        .research-phase > a { white-space: nowrap; }
+        .course-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
+        .course-item { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+        .course-details { margin-top: 12px; border-bottom: 1px solid var(--line); }
+        .course-details summary { padding: 14px 0; color: var(--heading); font-size: 0.9rem; font-weight: 700; cursor: pointer; }
+        .course-details summary::marker { color: var(--accent); }
+        .course-details summary span { margin-left: 8px; color: var(--muted); font-size: 0.78rem; font-weight: 400; }
+        .course-details summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+        .course-details[open] { padding-bottom: 12px; }
+        .course-details[open] summary { margin-bottom: 4px; }
+        .course-details .course-item { border-bottom: 0; }
+        .research-title { max-width: 720px; margin: 0 0 16px; font-size: 1.4rem; line-height: 1.6; letter-spacing: -0.5px; }
+        .research-meta { margin-bottom: 20px; font-size: 0.85rem; color: var(--muted); }
+        .research-meta p { margin: 3px 0; }
+        .status { margin-left: 6px; color: var(--accent); font-weight: 700; }
+        .experience-date { color: var(--muted); font-size: 0.8rem; }
+        a { color: var(--accent); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; transition: text-decoration-color 150ms ease; }
+        a:hover { text-decoration-color: currentColor; }
+        a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+        .video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 28px 0 36px; }
+        .video-grid figure { min-width: 0; margin: 0; }
+        .video-grid iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: 4px; background: #ffffff; }
+        .video-grid figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; margin-top: 8px; color: var(--muted); font-size: 0.78rem; }
+        .video-grid figcaption span { color: var(--heading); font-weight: 700; }
+        .video-grid figcaption a { font-size: 0.72rem; }
+        .task-video-group { margin: 18px 0 24px; }
+        .task-video-group > p { margin: 0 0 12px; color: var(--muted); font-size: 0.8rem; }
+        .task-video-group .video-grid { margin: 0; }
+        .task-video-group video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; border: 1px solid var(--line); border-radius: 4px; background: #fff; }
 
-        @media (max-width: 600px) {
-            .header-content { flex-direction: column; text-align: center; }
-            .profile-photo { margin-right: 0; margin-bottom: 20px; }
-            .course-grid { grid-template-columns: 1fr; }
+        @media (max-width: 820px) {
+            .feature-list li { grid-template-columns: 1fr; gap: 5px; }
+        }
+        @media (max-width: 680px) {
+            body { padding: 36px 22px 56px; }
+            .header-content { flex-direction: column; align-items: flex-start; gap: 18px; padding-bottom: 24px; }
+            .profile-text h1 { font-size: 2.5rem; }
+            .english-name { font-size: 1rem; }
+            .contact { flex-shrink: 1; text-align: left; }
+            section { margin-top: 32px; }
+            .course-grid, .video-grid { grid-template-columns: 1fr; }
+            .feature-list li { grid-template-columns: 1fr; gap: 5px; }
+            .timeline > li { grid-template-columns: 1fr; gap: 6px; padding-bottom: 24px; }
+            .timeline-date { padding-left: 22px; }
+            h2 { font-size: 1.3rem; }
+            .research-title { font-size: 1.15rem; }
+        }
+        @media print {
+            body { max-width: none; padding: 0; background: white; font-size: 10pt; }
+            .header-content, h2, h3, h4 { break-after: avoid; }
+            .section-nav { display: none; }
+            li, .course-item { break-inside: avoid; }
+            a { color: inherit; }
+            .video-grid iframe { display: none; }
+            .task-video-group video { display: none; }
+            .video-grid figcaption a::after { content: ' (' attr(href) ')'; }
         }
     </style>
 </head>
@@ -74,96 +138,259 @@
     <header>
         <div class="header-content">
             <div class="profile-text">
-                <h1>백재민 <span style="font-size: 0.6em; font-weight: normal; color: #888;">Jaemin Baek</span></h1>
-                <p style="margin: 5px 0 0 0; color: #444; font-weight: 500;">DGIST 기초학부 컴퓨터공학 트랙 (3학년)</p>
+                <h1>백재민 <span class="english-name">Jaemin Baek</span></h1>
+                <p class="affiliation">DGIST 기초학부 컴퓨터공학 트랙 (3학년)</p>
+                <p class="research-interests">Robot Learning &middot; Vision&ndash;Language&ndash;Action</p>
             </div>
             <div class="contact">
-                Email: <a href="mailto:jmbaek@dgist.ac.kr" style="color: #666; text-decoration: none;">jmbaek@dgist.ac.kr</a><br>
-                GitHub: <a href="https://github.com/DGIST-JaeminBaek" target="_blank" style="color: #666; text-decoration: none;">DGIST-JaeminBaek</a><br>
+                Email: <a href="mailto:jmbaek@dgist.ac.kr">jmbaek@dgist.ac.kr</a><br>
+                GitHub: <a href="https://github.com/DGIST-JaeminBaek" target="_blank" rel="noopener noreferrer">DGIST-JaeminBaek</a><br>
                 Location: Daegu, South Korea
             </div>
         </div>
+        <nav class="section-nav" aria-label="CV sections">
+            <a href="#education-experience">Education &amp; Experience</a>
+            <a href="#research">Research</a>
+            <a href="#awards">Awards</a>
+        </nav>
     </header>
-    
-    <section>
-        
-        <h2>Education</h2>
-        <div class="gpa-highlight">
-            Cumulative GPA: 4.12 / 4.30 <span style="font-weight: normal; font-size: 0.8em; color: #888;">(98.2 / 100)</span>
-        </div>
-        <p><strong>DGIST (대구경북과학기술원)</strong> | 2022.03 - 현재 (2023-2024 군 휴학)</p>        
-        
-        <h3>Current Semester (Spring 2026)</h3>
-        <div class="course-grid">
-            <div class="course-item">컴퓨터비전개론 <span style="font-size: 0.8em; color: #888;"></span></div>
-            <div class="course-item">시스템 프로그래밍 <span style="font-size: 0.8em; color: #888;"></span></div>
-            <div class="course-item">컴퓨터 구조 <span style="font-size: 0.8em; color: #888;"></span></div>
-            <div class="course-item">프로그래밍 언어 <span style="font-size: 0.8em; color: #888;"></span></div>
-            <div class="course-item">기계학습개론 <span style="font-size: 0.8em; color: #888;"></span></div>
 
-        </div>
+    <section id="education-experience" aria-labelledby="education-experience-heading">
+        <h2 id="education-experience-heading">Education &amp; Experience</h2>
+        <ol class="timeline">
+            <li>
+                <span class="timeline-date">2022.03</span>
+                <div class="timeline-content">
+                    <h3>DGIST (대구경북과학기술원) 기초학부 입학</h3>
+                </div>
+            </li>
+            <li>
+                <span class="timeline-date">2023.07.31 — 2025.01.30</span>
+                <div class="timeline-content">
+                    <h3>군 휴학 · 대한민국 육군 복무</h3>
+                    <p>병장 전역</p>
+                    <p>한국과학기술원(KAIST) SW교육센터 — 군 장병 ICT 중점과정 수료<br>
+                        <span class="experience-date">2024.07.29 — 2024.10.18</span>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <span class="timeline-date">2025 — 현재</span>
+                <div class="timeline-content">
+                    <h3>DGIST 복학 · 재학</h3>
+                    <p class="academic-summary">누적 GPA 4.14 / 4.30 · 환산 점수 98.4 / 100</p>
+                    <details class="course-details">
+                        <summary>Current Semester (Fall 2026) <span>(9 courses)</span></summary>
+                        <div class="course-grid">
+                            <div class="course-item">컴퓨터 네트워크 (3학점)</div>
+                            <div class="course-item">확률과 통계 및 실습 (3학점)</div>
+                            <div class="course-item">딥러닝개론 (3학점)</div>
+                            <div class="course-item">운영체제 (3학점)</div>
+                            <div class="course-item">컴퓨터 알고리즘 (3학점)</div>
+                            <div class="course-item">UGRP II (3학점)</div>
+                            <div class="course-item">AI 및 법률 (온라인, 1학점)</div>
+                            <div class="course-item">인적 자원을 위한 AI (온라인, 1학점)</div>
+                            <div class="course-item">금융 분야 머신 러닝의 기초 (온라인, 1학점)</div>
+                        </div>
+                    </details>
 
-        <h3>Relevant Coursework (Completed)</h3>
-        <div class="course-grid">
-            <div class="course-item">선형대수학 (A+)</div>
-            <div class="course-item">자료구조 (A+)</div>
-            <div class="course-item">객체지향 프로그래밍 (A+)</div>
-            <div class="course-item">회로이론 및 계측법 (실습) (A+)</div>
-            <div class="course-item">회로이론 및 계측법 (이론) (A0)</div>
-            <div class="course-item">이산수학 (A0)</div>
-            <div class="course-item">인공지능기초 (A0)</div>
-            <div class="course-item">디지털 논리회로 (B+)</div>
-        </div>
+                    <details class="course-details">
+                        <summary>Relevant Coursework (Completed) <span>(13 courses)</span></summary>
+                        <div class="course-grid">
+                            <div class="course-item">컴퓨터 비전 개론 (A+)</div>
+                            <div class="course-item">시스템 프로그래밍 (A+)</div>
+                            <div class="course-item">컴퓨터구조 (A+)</div>
+                            <div class="course-item">프로그래밍 언어 (A+)</div>
+                            <div class="course-item">기계학습개론 (A0)</div>
+                            <div class="course-item">선형대수학 (A+)</div>
+                            <div class="course-item">자료구조 (A+)</div>
+                            <div class="course-item">객체지향 프로그래밍 (A+)</div>
+                            <div class="course-item">회로이론 및 계측법 (실습) (A+)</div>
+                            <div class="course-item">회로이론 및 계측법 (이론) (A0)</div>
+                            <div class="course-item">이산수학 (A0)</div>
+                            <div class="course-item">인공지능기초 (A0)</div>
+                            <div class="course-item">디지털 논리회로 (B+)</div>
+                        </div>
+                    </details>
+                </div>
+            </li>
+            <li>
+                <span class="timeline-date">Summer 2026</span>
+                <div class="timeline-content">
+                    <h3>DGIST 대학원 인턴 프로그램 (<a href="https://ihbae.com/" target="_blank" rel="noopener noreferrer">CVLab</a>)</h3>
+                </div>
+            </li>
+        </ol>
     </section>
 
-    <section>
-        <h2>Research Experience</h2>
+    <section id="research" aria-labelledby="research-heading">
+        <h2 id="research-heading">Research Experience</h2>
         <div class="research-card">
-            <h3 style="border:none; margin-top:0; color:#005eb8; margin-bottom: 5px; line-height: 1.3;">
+            <h3 class="research-title">
                 UGRP: 로봇 파운데이션 모델 기반 데이터 효율적 작업 적응 기술 연구
             </h3>
-            
-            <div style="margin-bottom: 20px;">
-                <p style="margin: 0; font-size: 0.9em; color: #444;">
-                    <strong>Advisor:</strong> 임성훈 교수님
+
+            <div class="research-meta">
+                <p>
+                    <strong>Advisor (2026년 1학기):</strong> <a href="https://rv.kaist.ac.kr/" target="_blank" rel="noopener noreferrer">임성훈 교수님</a><br>
+                    <strong>Advisor (2026년 2학기):</strong> <a href="https://ihbae.com/" target="_blank" rel="noopener noreferrer">배인환 교수님</a>
                 </p>
-                <p style="margin: 0; font-size: 0.85em; color: #666;">
+                <p>
                     <strong>수행 기간:</strong> 2026. 02. 23. — 2026. 12. 12.
-                    <span style="color: #005eb8; font-weight: bold; margin-left: 5px;">(진행 중)</span>
+                    <span class="status">(진행 중)</span>
                 </p>
             </div>
-            
+
             <p>
-                최신 VLA(Vision-Language-Action) 모델을 Piper 로봇 플랫폼에 이식하고, 
-                최소한의 시연 데이터(Demonstration)로 새로운 태스크를 수행할 수 있도록 하는 제어 시스템 및 학습 전략을 수립하고자 한다.
-            </p>                
-            
-            <h4>Current Focus & Technical Approach (2026.04)</h4>
-            <ul>
-                <li>
-                    <strong>인터페이스 설계:</strong> 
-                    Piper Python SDK, LeRobot 라이브러리 및 
-                    <a href="https://github.com/dhkim-furiosa/LoRA-SP" target="_blank" style="text-decoration: underline; color: #005eb8; font-weight: bold;">
-                        선행 연구 배포 자료(LoRA-SP)
-                    </a>를 활용하여 모델의 추론 행동을 로봇의 실시간 동작으로 변환하는 통합 파이프라인 구축 예정
-                </li>                                
-                <li><strong>제어 파이프라인 설계:</strong> 
-                    관절 값 캘리브레이션을 통한 동작 범위 정규화로 모델 추론 결과 실행 시의 급가속 방지 및 하드웨어 안전성 확보 연구 예정
+                소량의 시연 데이터(Demonstration)로 로봇이 새로운 작업에 적응할 수 있는 방법을 탐구하고,
+                Piper 로봇 플랫폼에서 VLA(Vision-Language-Action) 모델을 학습·검증하고 있다.
+            </p>
+
+            <div class="video-grid" aria-label="UGRP 연구 영상">
+                <figure>
+                    <iframe src="https://www.youtube-nocookie.com/embed/pmgkuUemNPQ" title="Teleoperation을 통한 에피소드 수집" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <figcaption><span>Teleoperation을 통한 에피소드 수집</span><a href="https://youtu.be/pmgkuUemNPQ" target="_blank" rel="noopener noreferrer">YouTube에서 보기 ↗</a></figcaption>
+                </figure>
+                <figure>
+                    <iframe src="https://www.youtube-nocookie.com/embed/wnQSwPRQdKw" title="SmolVLA 학습 후 동작 데모" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <figcaption><span><a href="https://huggingface.co/blog/smolvla" target="_blank" rel="noopener noreferrer">SmolVLA</a> 학습 후 동작 데모</span><a href="https://youtu.be/wnQSwPRQdKw" target="_blank" rel="noopener noreferrer">YouTube에서 보기 ↗</a></figcaption>
+                </figure>
+            </div>
+
+            <h4>실험 환경 및 파이프라인 구축 · 2026.03–06</h4>
+            <ul class="feature-list">
+                <li><strong>로봇 구동 환경</strong>
+                    <div class="research-points">
+                        <p>Ubuntu 22.04 기반 Piper Master–Slave Teleoperation 환경 구성.</p>
+                        <p>Python SDK 소스와 CAN 패킷을 분석하여 모드 설정 오류 및 관절 피드백 미수신 문제 해결.</p>
+                    </div>
                 </li>
-                <li><strong>선행 연구 분석 및 실험 설계:</strong> 
-                    선행 연구 기반의 표준 카메라 세팅을 분석하고, 제로샷 성능 측정 및 파인튜닝 실험을 위한 시나리오 선정 및 성공 지표 설계 예정 
+                <li><strong>녹화·학습·추론 연결</strong>
+                    <div class="research-points">
+                        <p>WeGo Robotics의 <a href="https://github.com/WeGo-Robotics/lerobot_robot_piper" target="_blank" rel="noopener noreferrer">LeRobot Robot Piper 플러그인</a>을 기반으로 녹화 파이프라인 구성.</p>
+                        <p>Top/Wrist 영상과 로봇 상태 동시 저장 검증.</p>
+                        <p>초기 5개 에피소드로 SmolVLA 미세조정 및 실제 로봇 추론 연결 확인.</p>
+                        <p>작업 성공률 평가에 앞서 전체 파이프라인 동작 검증.</p>
+                    </div>
                 </li>
             </ul>
-            
-            <h4>Key Achievements (2026.03)</h4>
-            <ul>
-                <li><strong>환경 구축:</strong> Ubuntu 22.04 기반 Piper 구동 환경 구축</li>
-                <li><strong>통신 트러블슈팅:</strong> 
-                    SDK 소스 코드(`interface_v2.py`) 및 CAN 패킷 분석을 통해 Master/Slave 모드 설정 오류를 식별하고, 하드웨어 설정 문제를 해결하여 실시간 Teleoperation 및 관절 피드백 정상화
+
+            <h4 class="research-phase"><span>도형 지우기 실험 · 2026.03–09</span><a href="https://ugrp43.github.io/" target="_blank" rel="noopener noreferrer">프로젝트 페이지 ↗</a></h4>
+            <ul class="feature-list">
+                <li><strong>기준 모델 및 평가</strong>
+                    <div class="research-points">
+                        <p>팀에서 Teleoperation으로 수집한 315개 시연과 132개 부분집합으로 SmolVLA 학습·비교.</p>
+                        <p>6개 위치 × 3종 도형 × 3회로 모델당 54회 평가. 팀 평가 결과, 315개 학습 모델의 평균 지운 비율 0.802 확인.</p>
+                    </div>
                 </li>
-                <li><strong>데이터 로깅:</strong> LeRobot 기반 에피소드 데이터 녹화 및 데이터 정규화(stats.json) 기능 구현</li>
+                <li><strong>선행 방법 적용·분석</strong>
+                    <div class="research-points">
+                        <p>SmolVLA에 메모리 모듈 <a href="https://arxiv.org/abs/2510.00695" target="_blank" rel="noopener noreferrer">HAMLET</a>과 B-스플라인 기반 <a href="https://github.com/teee000/ABPolicy-code" target="_blank" rel="noopener noreferrer">ABPolicy</a>를 각각 적용하여 동작 변화 분석.</p>
+                        <p>ABPolicy는 스무딩 없이 동일 위치·도형 실험 3회로 기존 스무딩 모델과 비교.</p>
+                        <p><span class="text-unit">속도 ZCR 52%</span>, <span class="text-unit">가속도 p95 32%</span>, <span class="text-unit">RMS jerk 25% 감소.</span></p>
+                        <p>동작의 떨림은 감소했으나 도형을 다 지우기 전 종료하는 문제는 지속. 안정성 개선과 작업 성능 개선을 구분하여 정리.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <h4>오탈자 지우기 실험 · 2026.10–진행 중</h4>
+            <div class="task-video-group" aria-label="오탈자 지우기 시연 데이터 수집 영상">
+                <p>오탈자 정정 시연 데이터 (DIGIST → DGIST)</p>
+                <div class="video-grid">
+                    <figure>
+                        <video id="erase-text-top" controls playsinline preload="metadata" poster="assets/videos/erase-text-top.jpg" aria-label="오탈자 지우기 데이터 수집: Top 카메라">
+                            <source src="assets/videos/erase-text-top.mp4" type="video/mp4">
+                            <a href="assets/videos/erase-text-top.mp4">Top 카메라 영상 보기</a>
+                        </video>
+                        <figcaption><span>Top 카메라</span><a href="assets/videos/erase-text-top.mp4" target="_blank" rel="noopener noreferrer">영상 별도로 보기 ↗</a></figcaption>
+                    </figure>
+                    <figure>
+                        <video id="erase-text-wrist" controls playsinline preload="metadata" poster="assets/videos/erase-text-wrist.jpg" aria-label="오탈자 지우기 데이터 수집: Wrist 카메라">
+                            <source src="assets/videos/erase-text-wrist.mp4" type="video/mp4">
+                            <a href="assets/videos/erase-text-wrist.mp4">Wrist 카메라 영상 보기</a>
+                        </video>
+                        <figcaption><span>Wrist 카메라</span><a href="assets/videos/erase-text-wrist.mp4" target="_blank" rel="noopener noreferrer">영상 별도로 보기 ↗</a></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <ul class="feature-list">
+                <li><strong>반자동 수집 도구</strong>
+                    <div class="research-points">
+                        <p>시연자별 동작 편차와 수집 부담을 줄이기 위해 픽셀–EEF 매핑 기반 궤적 합성·재생 도구 구현.</p>
+                        <p><a href="https://huggingface.co/blog/smolvlm" target="_blank" rel="noopener noreferrer">SmolVLM</a> 문자 인식으로 수집 설정 자동화.</p>
+                        <p>이동 시간·문지르는 횟수·누르는 높이·위치를 다양화. 팀 수집·검수를 거쳐 26개 문자 × 6개 위치의 156개 에피소드 데이터셋 구축.</p>
+                    </div>
+                </li>
+                <li><strong>SmolVLA·<a href="https://github.com/Physical-Intelligence/openpi" target="_blank" rel="noopener noreferrer">π0.5</a> 비교</strong>
+                    <div class="research-points">
+                        <p>6글자 문자열의 불필요한 문자 하나를 지워 DGIST로 만드는 작업으로 전환하고 두 모델 미세조정.</p>
+                        <p>팀에서 위치별 18회와 정답 위치가 두 곳인 중복 문자 조건 15회로 모델별 33회 평가 데이터 수집.</p>
+                        <p>위치별 성능·실패 양상 정량 분석 진행 중.</p>
+                    </div>
+                </li>
+                <li><strong>시각·언어 의존성 분석</strong>
+                    <div class="research-points">
+                        <p>지시문의 문자열과 실제 보드 상태를 다르게 제시하여 텍스트를 우선하는 현상 식별. 현재 문자열을 지시문에서 제외하고 재학습.</p>
+                        <p>학습에서 제외한 문자와 특수문자 정성 평가 수행. 특수문자 위로 이동하더라도 실제 지우기에는 실패하는 경우를 구분하여 기록.</p>
+                    </div>
+                </li>
+                <li><strong>HAMLET 재적용</strong>
+                    <div class="research-points">
+                        <p>전체 궤적 학습 시 집고 놓기 반복, 복귀 구간 제외 시 지우기 반복을 관찰.</p>
+                        <p>동작 이력 활용을 위해 HAMLET을 전체 궤적 데이터에 적용.</p>
+                        <p>지우기 후 원위치 복귀까지 생성함을 정성 확인. 불충분한 지우기와 복귀 후 작업 재시작은 남은 문제로 기록.</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
+    <section id="awards" aria-labelledby="awards-heading">
+        <h2 id="awards-heading">Honors &amp; Awards</h2>
+        <ol class="timeline">
+            <li>
+                <span class="timeline-date">재학 기간</span>
+                <div class="timeline-content">
+                    <h3>DGIST Dean’s List</h3>
+                    <p>2022년 1·2학기, 2025년 1학기, 2026년 1학기 선정</p>
+                </div>
+            </li>
+        </ol>
+    </section>
+    <script>
+        (() => {
+            const top = document.getElementById('erase-text-top');
+            const wrist = document.getElementById('erase-text-wrist');
+            const videos = [top, wrist];
+
+            function alignTime(source, target, tolerance = 0.1) {
+                if (target.readyState < 1 || target.seeking) return;
+                if (Math.abs(source.currentTime - target.currentTime) > tolerance) {
+                    target.currentTime = Math.min(source.currentTime, target.duration);
+                }
+            }
+
+            videos.forEach((video, index) => {
+                const other = videos[1 - index];
+                video.addEventListener('play', () => {
+                    alignTime(video, other);
+                    if (other.paused) other.play().catch(() => video.pause());
+                });
+                video.addEventListener('pause', () => {
+                    if (!other.paused) other.pause();
+                });
+                video.addEventListener('seeking', () => alignTime(video, other));
+                video.addEventListener('ratechange', () => {
+                    if (other.playbackRate !== video.playbackRate) {
+                        other.playbackRate = video.playbackRate;
+                    }
+                });
+                video.addEventListener('ended', () => other.pause());
+            });
+
+            top.addEventListener('timeupdate', () => {
+                if (!top.paused && !top.seeking) alignTime(top, wrist, 0.25);
+            });
+        })();
+    </script>
 </body>
 </html>
