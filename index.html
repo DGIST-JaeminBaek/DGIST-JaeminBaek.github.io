@@ -6,14 +6,14 @@
     <title>백재민 | Jaemin Baek</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <style>
         :root {
             color-scheme: light;
             --background: #ffffff;
             --heading: #242424;
-            --text: #414141;
-            --muted: #74716d;
+            --text: #333333;
+            --muted: #666666;
             --accent: #803d48;
             --line: #e8e8e8;
         }
@@ -25,8 +25,9 @@
             padding: 64px 40px 88px;
             background: var(--background);
             color: var(--text);
-            font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;
-            font-size: 15px;
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
             line-height: 1.8;
             word-break: keep-all;
             overflow-wrap: anywhere;
@@ -41,34 +42,34 @@
         }
         .profile-text h1 { margin: 0; color: var(--heading); font-size: 3.3rem; line-height: 1.3; letter-spacing: -2px; }
         .english-name { display: inline-block; margin-left: 8px; color: var(--muted); font-size: 1.15rem; font-weight: 400; letter-spacing: 0; }
-        .affiliation { margin: 12px 0 0; font-size: 0.9rem; }
-        .research-interests { margin: 8px 0 0; color: var(--accent); font-size: 0.83rem; letter-spacing: 0.02em; }
-        .contact { flex-shrink: 0; text-align: right; color: var(--muted); font-size: 0.82rem; line-height: 1.9; }
+        .affiliation { margin: 12px 0 0; font-size: 1rem; }
+        .research-interests { margin: 8px 0 0; color: var(--accent); font-size: 0.875rem; letter-spacing: 0.02em; }
+        .contact { flex-shrink: 0; text-align: right; color: var(--muted); font-size: 0.875rem; line-height: 1.9; }
         .contact a { color: inherit; }
-        .section-nav { display: flex; flex-wrap: wrap; gap: 24px; padding-top: 16px; font-size: 0.8rem; }
+        .section-nav { display: flex; flex-wrap: wrap; gap: 24px; padding-top: 16px; font-size: 0.875rem; }
         .section-nav a { color: var(--muted); }
         .section-nav a:hover { color: var(--accent); }
         section { margin-top: 56px; scroll-margin-top: 24px; }
         h2 { margin: 0 0 28px; padding-bottom: 14px; border-bottom: 1px solid var(--line); color: var(--heading); font-size: 1.45rem; font-weight: 700; letter-spacing: -0.4px; }
         h3 { margin: 28px 0 12px; color: var(--heading); font-size: 1rem; font-weight: 700; }
-        h4 { margin: 34px 0 12px; color: var(--muted); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.025em; }
+        h4 { margin: 34px 0 12px; color: var(--muted); font-size: 0.875rem; font-weight: 700; letter-spacing: 0.025em; }
         strong { color: var(--heading); font-weight: 700; }
-        .academic-summary { margin: 6px 0 12px; color: var(--muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+        .academic-summary { margin: 6px 0 12px; color: var(--muted); font-size: 0.875rem; font-variant-numeric: tabular-nums; }
         .timeline { margin: 0; padding: 0; list-style: none; }
         .timeline > li { display: grid; grid-template-columns: 155px minmax(0, 1fr); gap: 24px; margin: 0; padding: 0 0 26px; }
         .timeline > li:last-child { padding-bottom: 0; }
-        .timeline-date { padding-top: 1px; color: var(--muted); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+        .timeline-date { padding-top: 1px; color: var(--muted); font-size: 0.875rem; font-variant-numeric: tabular-nums; }
         .timeline-content { position: relative; padding-left: 22px; border-left: 1px solid var(--line); }
         .timeline-content::before { content: ''; position: absolute; left: -3px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
         .timeline-content h3 { margin: 0; font-size: 0.95rem; font-weight: 700; }
-        .timeline-content p { margin: 5px 0 0; font-size: 0.85rem; }
+        .timeline-content p { margin: 5px 0 0; font-size: 1rem; }
         .timeline-content .academic-summary { margin: 6px 0 12px; }
         ul { margin: 0 0 20px; padding-left: 20px; }
         li { margin-bottom: 12px; padding-left: 3px; }
         li::marker { color: var(--muted); }
         .feature-list { margin: 0; padding: 0; list-style: none; }
-        .feature-list li { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 22px; margin: 0; padding: 17px 0; border-top: 1px solid var(--line); font-size: 0.9rem; }
-        .feature-list li > strong { font-size: 0.87rem; }
+        .feature-list li { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 22px; margin: 0; padding: 17px 0; border-top: 1px solid var(--line); font-size: 1rem; }
+        .feature-list li > strong { font-size: 1rem; }
         .research-points { min-width: 0; }
         .research-points p { margin: 0; text-wrap: pretty; }
         .research-points p + p { margin-top: 6px; }
@@ -76,31 +77,31 @@
         .research-phase { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; }
         .research-phase > a { white-space: nowrap; }
         .course-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
-        .course-item { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+        .course-item { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 1rem; }
         .course-details { margin-top: 12px; border-bottom: 1px solid var(--line); }
-        .course-details summary { padding: 14px 0; color: var(--heading); font-size: 0.9rem; font-weight: 700; cursor: pointer; }
+        .course-details summary { padding: 14px 0; color: var(--heading); font-size: 1rem; font-weight: 700; cursor: pointer; }
         .course-details summary::marker { color: var(--accent); }
-        .course-details summary span { margin-left: 8px; color: var(--muted); font-size: 0.78rem; font-weight: 400; }
+        .course-details summary span { margin-left: 8px; color: var(--muted); font-size: 0.875rem; font-weight: 400; }
         .course-details summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
         .course-details[open] { padding-bottom: 12px; }
         .course-details[open] summary { margin-bottom: 4px; }
         .course-details .course-item { border-bottom: 0; }
         .research-title { max-width: 720px; margin: 0 0 16px; font-size: 1.4rem; line-height: 1.6; letter-spacing: -0.5px; }
-        .research-meta { margin-bottom: 20px; font-size: 0.85rem; color: var(--muted); }
+        .research-meta { margin-bottom: 20px; font-size: 0.875rem; color: var(--muted); }
         .research-meta p { margin: 3px 0; }
         .status { margin-left: 6px; color: var(--accent); font-weight: 700; }
-        .experience-date { color: var(--muted); font-size: 0.8rem; }
+        .experience-date { color: var(--muted); font-size: 0.875rem; }
         a { color: var(--accent); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; transition: text-decoration-color 150ms ease; }
         a:hover { text-decoration-color: currentColor; }
         a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
         .video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 28px 0 36px; }
         .video-grid figure { min-width: 0; margin: 0; }
         .video-grid iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: 4px; background: #ffffff; }
-        .video-grid figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; margin-top: 8px; color: var(--muted); font-size: 0.78rem; }
+        .video-grid figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; margin-top: 8px; color: var(--muted); font-size: 0.875rem; }
         .video-grid figcaption span { color: var(--heading); font-weight: 700; }
-        .video-grid figcaption a { font-size: 0.72rem; }
+        .video-grid figcaption a { font-size: 0.875rem; }
         .task-video-group { margin: 18px 0 24px; }
-        .task-video-group > p { margin: 0 0 12px; color: var(--muted); font-size: 0.8rem; }
+        .task-video-group > p { margin: 0 0 12px; color: var(--muted); font-size: 0.875rem; }
         .task-video-group .video-grid { margin: 0; }
         .task-video-group video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; border: 1px solid var(--line); border-radius: 4px; background: #fff; }
 
